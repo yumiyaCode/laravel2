@@ -84,3 +84,26 @@ Route::get('eloquent-pra',function(){
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//beranda
+Route::get('beranda',function()
+{
+return view('beranda');
+});
+
+Route::get('about',function()
+{
+return view('about');
+});
+
+Route::get('kontak',function()
+{
+return view('kontak');
+});
+
+//crud
+Route::resource('dosen','DosenController');
