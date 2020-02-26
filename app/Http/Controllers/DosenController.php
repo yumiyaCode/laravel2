@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class DosenController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -95,6 +99,6 @@ class DosenController extends Controller
     {
         $dosen = Dosen::findOrFail($id)->delete();
         return redirect()->route('dosen.index')
-                         ->with(['message'=>'Berhasil diedit']);
+                        ->with(['message'=>'Berhasil diedit']);
     }
 }
