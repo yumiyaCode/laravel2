@@ -99,6 +99,6 @@ class DosenController extends Controller
     {
         $dosen = Dosen::findOrFail($id)->delete();
         return redirect()->route('dosen.index')
-                        ->with(['message'=>'Berhasil diedit']);
+                        ->with(['message1'=>'Berhasil diedit']);
     }
 }

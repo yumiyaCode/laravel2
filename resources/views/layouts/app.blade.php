@@ -37,7 +37,16 @@
                             @else
                                 <li class="nav-item">
                                     <a href="{{Route('dosen.index')}}" class="nav-item">
-                                    Dosen
+                                    Dosen 
+                                    </a>
+                                    <a href="{{Route('hobi.index')}}" class="nav-item">
+                                    Hobi 
+                                    </a>
+                                    <a href="{{Route('mahasiswa.index')}}" class="nav-item">
+                                    Mahasiswa
+                                    </a>
+                                    <a href="{{Route('wali.index')}}" class="nav-item">
+                                    Wali
                                     </a>
                                 </li>
                         @endguest

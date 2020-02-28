@@ -5,24 +5,20 @@
         <div class="col md-10">
             <div class="card">
                 <div class="card-header">
-                Tambah Data Dosen
+                Lihat Data Wali
                 </div>
                 <div class="card-body">
-                <form action="{{Route('dosen.store')}}" method="post">
-                    @csrf
                     <div class="form-group">
-                        <label for="">Nama Dosen</label>
-                        <input type="text" name="nama" class="form-control" required>
+                        <label for="">Nama Wali</label>
+                        <input type="text" name="nama" value="{{$wl->nama}}" class="form-control" readonly>
                     </div>
                     <div class="form-group">
-                        <label for="">No Induk Pegawai Dosen</label>
-                        <input type="text" name="nipd" class="form-control" required>
+                        <label for="">Nama Mahasiswa</label>
+                        <input type="text" name="id_mahasiswa" class="form-control" value="{{$wl->mahasiswa->nama}}" readonly>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
                         <a href="{{url()->previous()}}" class="btn btn-outline-danger">Kembali</a>
                     </div>
-                </form>
                 </div>
             </div>
         </div>

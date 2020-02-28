@@ -5,18 +5,15 @@
         <div class="col md-10">
             <div class="card">
                 <div class="card-header">
-                Tambah Data Dosen
+                Tambah Data Hobi
                 </div>
                 <div class="card-body">
-                <form action="{{Route('dosen.store')}}" method="post">
+                <form action="{{Route('hobi.update',$hobi->id)}}" method="post">
+                <input type="hidden" name="_method" value="PUT">
                     @csrf
                     <div class="form-group">
-                        <label for="">Nama Dosen</label>
-                        <input type="text" name="nama" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">No Induk Pegawai Dosen</label>
-                        <input type="text" name="nipd" class="form-control" required>
+                        <label for="">Nama Hobi</label>
+                        <input type="text" name="hobi" value="{{$hobi->hobi}}" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Simpan</button>

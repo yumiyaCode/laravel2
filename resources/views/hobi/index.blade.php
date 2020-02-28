@@ -14,8 +14,8 @@
             @endif
        <div class="card">
         <div class="card-header">
-            Data Dosen
-            <a href="{{Route('dosen.create')}}" class="float-right btn btn-success">
+            Data Hobi
+            <a href="{{Route('hobi.create')}}" class="float-right btn btn-success">
 
                 Tambah data
     
@@ -27,24 +27,21 @@
             <thead>
         <tr>
                 <th>No</th>      
-                <th>Nama</th>
-                <th>NIPD</th>
-                <th>Aksi</th>
+                <th>Hobi</th>
         </tr>  
             </thead>
             <tbody>
                 @php $no= 1; @endphp
-                @foreach($dosen as $data)
+                @foreach($hobi as $data)
                 <tr>
                     <td>{{$no++}}</td>
-                    <td>{{$data->nama}}</td>
-                    <td>{{$data->nipd}}</td>
+                    <td>{{$data->hobi}}</td>
                     <td>
-                    <form action="{{Route('dosen.destroy',$data->id)}}" method="post">
+                    <form action="{{Route('hobi.destroy',$data->id)}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <a href="{{Route('dosen.show',$data->id)}}" class="btn btn-outline-primary"> Lihat</a>
-                        <a href="{{Route('dosen.edit',$data->id)}}" class="btn btn-outline-success">   Edit </a>
+                        <a href="{{Route('hobi.show',$data->id)}}" class="btn btn-outline-primary"> Lihat</a>
+                        <a href="{{Route('hobi.edit',$data->id)}}" class="btn btn-outline-success">   Edit </a>
                         <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Yakin Hapus?')">Hapus</button>
                     </form>
                     </td>
